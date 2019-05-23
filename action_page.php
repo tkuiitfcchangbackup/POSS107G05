@@ -2,5 +2,5 @@
 $search=$_POST["searchQuest"];
 echo $search;
 print_r($search);
-echo "<br>";
+echo "pepi frog is not funny";
 ?>
