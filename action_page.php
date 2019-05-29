@@ -3,7 +3,7 @@
 </head>
 <?php
 $search=$_POST["searchQuest"];
-echo "The word you are looking👀 for is :"
+echo "The word you are looking 👀 for is :"
 ?>
 
 <?php
