@@ -10,5 +10,5 @@
 ## Members
 * 吳偉丞   IITSE 2   <https://github.com/nico12313>
 * 陳俊瑋   IITSE 2   <https://github.com/junweichen1999>
-* 周佑丞   IITSE 2   <https://github.com/Daniel871210>
+* 周宥丞   IITSE 2   <https://github.com/Daniel871210>
 * 李俊宏   IITSE 2   <https://github.com/gerrardmas>
