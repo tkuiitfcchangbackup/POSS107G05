@@ -6,7 +6,7 @@
 ## Defenition of our word 
 ###### To define our words in the dictionary, we decide to reference the meaning from Urban Dictionary which the most liked.
 # Group introduction 
-###### We are goup 5,here is our goup members 
+###### We are goup 5,here is our goup members: 
 ## Members
 * 吳偉丞   IITSE 2   <https://github.com/nico12313>
 * 陳俊瑋   IITSE 2   <https://github.com/junweichen1999>
