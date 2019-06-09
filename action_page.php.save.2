@@ -1,0 +1,25 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<?php
+display_errors = On
+ 
+display_startup_errors = O
+
+$search=$_POST["searchQuest"];
+echo "The word you are looking 👀 for is :"
+echo $search;
+echo "<br>";
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "http://tw.yahoo.com/");
+curl_setopt($ch, CURLOPT_HEADER, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+$temp=curl_exec($ch);
+curl_close($ch);
+
+?>
+<br>
+<br>
+<br>
+<a href="index.html">Back to front page</a>
