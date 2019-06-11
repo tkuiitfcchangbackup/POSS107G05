@@ -11,6 +11,6 @@
 
 
 * 吳偉丞   IITSE 2  [個人 github 網址](https://github.com/nico12313/"Title")
-* 陳俊瑋   IITSE 2  [個人 github 網址] <https://github.com/junweichen1999>
-* 周宥丞   IITSE 2  [個人 github 網址]<https://github.com/Daniel871210>
-* 李俊宏   IITSE 2  [個人 github 網址]<https://github.com/gerrardmas>
+* 陳俊瑋   IITSE 2  [個人 github 網址](https://github.com/junweichen1999/"Title")
+* 周宥丞   IITSE 2  [個人 github 網址](https://github.com/Daniel871210/"Title")
+* 李俊宏   IITSE 2  [個人 github 網址](https://github.com/gerrardmas/"Title")
