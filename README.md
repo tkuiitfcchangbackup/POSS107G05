@@ -1,4 +1,4 @@
-# Mushroom DictionaryR
+# Mushroom Dictionary®
 ## Function 
 ###### The feature of our dictionary will be similar to a recent online dictionary called Urban Dictionary,
 ###### but the most differently is that we would translate it into chinese, the most mysterious oriental language,
