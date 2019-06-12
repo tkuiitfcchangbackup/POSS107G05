@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Mushroom Dictionary!</title>
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body style="background-color:black;">
 <center>
-<div style='text-align:center'>
-<div style="width:350px;background-color:#D4E6F8;">
+
+<table border="1">
+<tr>
+<td style="width:350px;">
+<table style="border:3px #FFFFFF solid;padding:5px;" rules="all" cellpadding='5';>
+<div style="width:350px;background-color:#D4E6F8;text-align:center;">
 <?php
 $search=$_POST["searchQuest"];
 $u_name=$_POST["searchName"];
@@ -57,12 +64,12 @@ mysqli_close($conn);
 
 ?>
 </div>
-</center>
-<a href="index.php"><h3>>>BACK TO FRONT PAGE<<</h3></a>
-<br>
+</table>
+</td>
+</tr>
+</table>
 <br>
 
-<center>
 <div style="width:350px;background-color:#D4E6F8;">
 <table border="1">
 <tr>
@@ -70,32 +77,42 @@ mysqli_close($conn);
 <table style="border:3px #FFFFFF solid;padding:5px;" rules="all" cellpadding='5';>
 <?php
 
-echo $p;
+echo "<h2>Meaning:</h2><br> ".$p;
 
 $from="<div class=\"example\">";
 $end="</div>";
 $q=cut($contents, $from, $end);
 $p=strip_tags($q);
-echo "<br><br>".$p;
+echo "<br><br><h2>Example:</h2><br> ".$p;
 
 $from="<div class=\"contributor\">";
 $end="</div>";
 $q=cut($contents, $from, $end);
 $p=strip_tags($q);
-echo "<br><br>".$p;
+echo "<br><br><h2>Contributor:</h2><br> ".$p."<br>";
 ?>
 </table>
 </td>
 </tr>
 </table>
 </div>
-</center>
+
 
 <br>
-<br>
+
+<table border="1">
+<tr>
+<td style="width:350px;">
+<table style="border:3px #FFFFFF solid;padding:5px;" rules="all" cellpadding='5';>
+<div style="width:350px;background-color:#D4E6F8;text-align:center;">
 <br>
 <a href="index.php"><h3>>>BACK TO FRONT PAGE<<</h3></a>
+<br>
 </div>
-
+</table>
+</td>
+</tr>
+</table>
+</center>
 </body>
 </html>

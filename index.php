@@ -9,6 +9,7 @@
 </head>
 <body style="background-color:black;">
 <center>
+<br>
 <div style="width:350px;background-color:#D4E6F8;">
 <table style="text-align:center;"border="1">
 <tr>
@@ -48,7 +49,7 @@
 <tr>
 <td style="width:350px;">
 <table style="border:3px #FFFFFF solid;padding:5px;" rules="all" cellpadding='5';>
-<font color="black"><h2>Search record : </h2></font>
+<font color="black"><br><h2>Search Record</h2></font>
 <center id="commentArea">
 <table style="border:3px #FFFFFF solid;padding:5px;" rules="all" cellpadding='5';>
 <p>
@@ -65,10 +66,10 @@ $total_records=mysqli_num_rows($result);  // 取得記錄數
 </p>
 <table  border="1" align="center">
 <tr>
-<td>_Time_</td>
-<td>_Name_</td>
-<td>_Word_</td>
-<td>_Result_</td>
+<td>Time</td>
+<td>Name</td>
+<td>Word</td>
+<td>Result</td>
 </tr>
 <?php
 for ($i=0;$i<$total_records;$i++) {$row = mysqli_fetch_assoc($result); //將陣列以欄位名索引
@@ -87,6 +88,7 @@ for ($i=0;$i<$total_records;$i++) {$row = mysqli_fetch_assoc($result); //將陣�
 </td>
 <tr>
 </table>
+<br>
 </center>
 </body>
 </html>
