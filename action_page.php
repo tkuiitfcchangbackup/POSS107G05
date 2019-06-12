@@ -6,33 +6,59 @@
 <div style='text-align:center'>
 <?php
 $search=$_POST["searchQuest"];
-//取得當下時間並寫入資料庫(只是為了排序用)
-$today = getdate();
-date("Y-m-d H:i");  //日期格式化
-$year = $today["year"]; //年
-$month = $today["mon"]; //月
-$day = $today["mday"];  //日
-$hours = $today["hours"];  //時
-$minutes = $today["minutes"];  //分
-$seconds = $today["seconds"];  //秒
+$u_name=$_POST["searchName"];
+$s_result="zErO";
+?>
+<!--
 
-$today_date=$year."-".$month."-".$day;
-$today_time=$hours.":".$minutes.":".$seconds;
+$con = mysql_connect("localhost","nicholas","12313");
+if(!$con){
+  die('Could not connect: '.mysql_error());
+}
 
-$conn = mysql_connect("localhost","root","posspo11");
-mysql_select_db("the_db");
+$servername = "localhost";
+$username = "nicholas";
+$password = "12313";
+$dbname = "the_db";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "INSERT INTO rec (user_id, word_req, word_trans)
+VALUES ('John', 'Doe', 'marry')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
 
 
+mysql_select_db('the_db', $con);
+
+mysql_query("INSERT INTO `rec` (`user_id`,`word_req`,`word_trans`)
+VALUES ('{$u_name}', '{$search}', '{$s_result}')");
+
+mysql_close($con);
+-->
+<?php
 echo "<br><br>";
 echo "The word you are looking for 👀 is : ";
-echo "<h2>".$search."</h2>";
-echo "<br>";
+echo "<h2>".$search."</h2><br>";
 $Brah="https://www.urbandictionary.com/define.php?term=".$search;
 $brah=str_replace(" ","+",$Brah);
 ?>
+
 <a href="index.html"><h3>>>BACK TO FRONT PAGE<<</h3></a>
 <br>
 </div>
+
 <?php
 $url=$brah;
 $ch=curl_init();
@@ -45,6 +71,7 @@ curl_close($ch);
 echo "$lines_string";
 
 ?>
+
 <div style='text-align:center'>
 <br>
 <br>

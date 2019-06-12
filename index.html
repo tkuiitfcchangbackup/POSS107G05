@@ -1,6 +1,6 @@
 <html>
 <center>
-<div style="width:350px;height:300px;background-color:#D4E6F8;">
+<div style="width:350px;height:305px;background-color:#D4E6F8;">
 <head>
 <table style="text-align:center;"border="1">
 <tr>
@@ -9,20 +9,27 @@
 </head>
 <body style="background-color:black;">
 <table style="border:3px #FFFFFF solid;padding:5px;" rules="all" cellpadding='5';>
-<font color="white"><h2>Mushroom Dictionary</h2></font>
+<font color="black"><h2>Mushroom Dictionary</h2></font>
 <h4>
   <a href="introduction.html">Introduction</a>
   <br>
   <a href="groupIntro.html">About Our Group</a>
   <br>
-  <a href="Test.html">Test</a>
+  <!--
+  <a href="Test.html" style="display:none">Test</a>
   <br>
+  -->
 </h4>
-<font color="white">
+<font color="black">
 <h4>Search the unknown words/memes:</h4>
 </font>
 <form action="/POSS107G05/action_page.php" method="post">
-  <font color="white">Searching word: </font><input type="text" name="searchQuest"><br>
+  <font color="black" size="3">Your name:<br></font>
+  <input type="text" name="searchName">
+  <br>
+  <font color="black" size="3">Searching word:<br></font>
+  <input type="text" name="searchQuest">
+  <br><br>
   <input type="submit" value="Search">
 </form>
 </tr>

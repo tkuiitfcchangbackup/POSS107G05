@@ -1,0 +1,76 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" 
+	content="width=device-width; 
+	initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+</head>
+<body>
+<div style='text-align:center'>
+<?php
+$search=$_POST["searchQuest"];
+//取得當下時間並寫入資料庫(只是為了排序用)
+$today = getdate();
+date("Y-m-d H:i");  //日期格式化
+$year = $today["year"]; //年
+$month = $today["mon"]; //月
+$day = $today["mday"];  //日
+$hours = $today["hours"];  //時
+$minutes = $today["minutes"];  //分
+$seconds = $today["seconds"];  //秒
+
+$today_date=$year."-".$month."-".$day;
+$today_time=$hours.":".$minutes.":".$seconds;
+
+$conn = mysql_connect("localhost","root","posspo11");
+mysql_select_db("the_db");
+
+//驗證我們有沒有連結上資料庫
+ if(@mysql_select_db("the_db"))
+        {
+         echo "資料庫存在";
+        }else{
+               echo "資料庫不存在";
+        }
+
+//設定編碼
+mysql_query("SET NAMES 'UTF8'");
+
+//SQL語法 用INSERT INTO "資料表名稱(參數)" VALUES(值)
+//keypoint: 若欄位為varchar帶入的值必須加引號
+$sql ="INSERT INTO comments(姓名,email,留言,日期,時間) VALUES('$u_name','$u_email','$u_comment','$today_date','$today_time')";
+
+//執行SQL, 寫入
+$result = mysql_query($sql) or die(mysql_error());
+
+//關閉資料庫
+mysql_close($conn);
+echo "留言已送出";
+
+echo "<br><br>";
+echo "The word you are looking for 👀 is : ";
+echo "<h2>".$search."</h2><br>";
+$Brah="https://www.urbandictionary.com/define.php?term=".$search;
+$brah=str_replace(" ","+",$Brah);
+?>
+<a href="index.html"><h3>>>BACK TO FRONT PAGE<<</h3></a>
+<br>
+</div>
+<?php
+$url=$brah;
+$ch=curl_init();
+$timeout=5;
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+$lines_string=curl_exec($ch);
+curl_close($ch);
+echo "$lines_string";
+
+?>
+<div style='text-align:center'>
+<br>
+<br>
+<br>
+<a href="index.html">Brah~</a>
+</div>
+</body>
