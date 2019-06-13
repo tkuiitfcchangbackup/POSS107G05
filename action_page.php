@@ -8,8 +8,8 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body style="background-color:black;">
-<center>
 
+<center>
 
 <div style="width:350px;background-color:#D4E6F8;text-align:center;">
 <table border="1">
@@ -42,10 +42,15 @@ return $message[0];
 }
 $q=cut($contents, $from, $end);
 $p=strip_tags($q);
+
 if (empty($p)){
 $p="Word not found...";
 }
 
+?>
+
+
+<?php
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
@@ -88,12 +93,18 @@ $from="<div class=\"example\">";
 $end="</div>";
 $q=cut($contents, $from, $end);
 $p=strip_tags($q);
+if (empty($p)){
+$p="Word not found...";
+}
 echo "<br><br><h2>Example:</h2><br> ".$p;
 
 $from="<div class=\"contributor\">";
 $end="</div>";
 $q=cut($contents, $from, $end);
 $p=strip_tags($q);
+if (empty($p)){
+$p="Word not found...";
+}
 echo "<br><br><h2>Contributor:</h2><br> ".$p."<br>";
 ?>
 </table>
