@@ -46,7 +46,8 @@
 <br><br><br>
 
 <div style="width:357px;background-color:#D4E6F8;">
-<table style="text-align:center;"border="1">
+<table style="word-break:break-all; table-layout: fixed; text-align:center;"border="1">
+<div style="background-color:#FFFFFF;">
 <tr>
 <td style="width:350px;">
 <table style="border:3px #FFFFFF solid;padding:5px;" rules="all" cellpadding='5';>
@@ -65,12 +66,12 @@ $total_fields=mysqli_num_fields($result); // 取得欄位數
 $total_records=mysqli_num_rows($result);  // 取得記錄數
 ?>
 </p>
-<table  border="1" align="center">
+<table border="1" align="center" style="table-layout: fixed; word-wrap:break-word;">
 <tr>
-<td>Time</td>
-<td>Name</td>
-<td>Word</td>
-<td>Result</td>
+<td width='41px'>Time</td>
+<td width='69px'>Name</td>
+<td width='60px'>Word</td>
+<td width='130px'>Result</td>
 </tr>
 <?php
 for ($i=0;$i<10;$i++) {$row = mysqli_fetch_assoc($result); //將陣列以欄位名索引
@@ -86,6 +87,7 @@ for ($i=0;$i<10;$i++) {$row = mysqli_fetch_assoc($result); //將陣列以欄位�
 </table>
 </td>
 </tr>
+</div>
 </table>
 </div>
 </center>
