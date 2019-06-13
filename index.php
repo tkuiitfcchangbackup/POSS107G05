@@ -38,13 +38,14 @@
   <br><br>
   <input type="submit" value="Search">
 </form>
-</tr>
 </table>
+</td>
+</tr>
 </table>
 </div>
 <br><br><br>
 
-<div style="width:350px;background-color:#D4E6F8;">
+<div style="width:357px;background-color:#D4E6F8;">
 <table style="text-align:center;"border="1">
 <tr>
 <td style="width:350px;">
@@ -56,7 +57,7 @@
 <?php
 $link=mysqli_connect("localhost","nicholas","12313") or die ("無法開啟Mysql資料庫連結"); //建立mysql資料庫連結
 mysqli_select_db($link, "the_db"); //選擇資料庫abc
-$sql = "SELECT update_time,user_id,word_req,word_trans FROM rec"; //在test資料表中選擇所有欄位
+$sql = "SELECT update_time,user_id,word_req,word_trans FROM rec order by update_time desc"; //在test資料表中選擇所有欄位
 mysqli_query($link,'SET CHARACTER SET utf8');	// 送出Big5編碼的MySQL指令
 mysqli_query($link,"SET collation_connection 'utf8'");
 $result = mysqli_query($link,$sql); // 執行SQL查詢
@@ -72,7 +73,7 @@ $total_records=mysqli_num_rows($result);  // 取得記錄數
 <td>Result</td>
 </tr>
 <?php
-for ($i=0;$i<$total_records;$i++) {$row = mysqli_fetch_assoc($result); //將陣列以欄位名索引
+for ($i=0;$i<10;$i++) {$row = mysqli_fetch_assoc($result); //將陣列以欄位名索引
 ?>
 <tr>
 <td><?php echo $row[update_time];?></td>
@@ -83,11 +84,11 @@ for ($i=0;$i<$total_records;$i++) {$row = mysqli_fetch_assoc($result); //將陣�
 <?php    }   ?>
 </table>
 </table>
-</center>
-</table>
 </td>
-<tr>
+</tr>
 </table>
+</div>
+</center>
 <br>
 </center>
 </body>
