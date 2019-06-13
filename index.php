@@ -7,7 +7,7 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
-<body style="background-color:white;">
+<body style="background-color:black;">
 <center>
 <br>
 <div style="width:350px;background-color:#D4E6F8;">
